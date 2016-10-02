@@ -1,5 +1,5 @@
-# cpsc344Project
-This contains the Unity files needed in order to make our game. 
+# cpsc340Project
+This contains the Unity files needed in order to make Project Paint. 
 
 ## In order to send the files you worked on to this repository, go to the folder where you cloned this project and in the folder that has the work you did, do the following:
 - git add -A (-A means add everything. You can upload a specific file or folder too like Script1.cs, texture1.png, Music/ instead of doing -A)
