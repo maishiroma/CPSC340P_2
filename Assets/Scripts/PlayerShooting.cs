@@ -10,10 +10,18 @@ public class PlayerShooting : MonoBehaviour {
 	public float shotSpeed;				//How fast is the shot going?
 	public float shotDelay;				//How much delay is in between each shot?
 	public bool inCoolDown;				//Is the player currently in cooldown?
-	
+	public string[] shotColors;			//All of the colors the player has?
+	public int currColorIndex;			//What color is the player currently on?
+
 	//This part does the shooting mechanic. The player shoots a shot that moves in the direction the player is facing.
 	void Update () 
 	{
+		if(Input.GetKeyUp(KeyCode.LeftShift) == true)
+		{
+			CycleColorWheel();
+			print(shotColors[currColorIndex]);
+		}
+
 		if(inCoolDown == false)
 		{
 			if(Input.GetMouseButtonUp(0) == true)
@@ -28,6 +36,8 @@ public class PlayerShooting : MonoBehaviour {
 
 				//The shot is created and moved.
 				GameObject shot = (GameObject)Instantiate(paintBallObj, paintBallSpawn.transform.position, shotRotation);
+				shot.GetComponent<ShotProperties>().shotColor = shotColors[currColorIndex];
+				shot.GetComponent<ShotProperties>().ChangeColorSprite();
 				shot.GetComponent<Rigidbody2D>().AddForce(shot.transform.up * shotSpeed);
 
 				//After firing a shot, the player is in cool down, where they have to wait for shotDelay in order to shoot again.
@@ -41,5 +51,14 @@ public class PlayerShooting : MonoBehaviour {
 	void ResetCoolDown()
 	{
 		inCoolDown = false;
+	}
+
+	//Shifts the color wheel to a different color.
+	void CycleColorWheel()
+	{
+		if(currColorIndex == shotColors.Length - 1)
+			currColorIndex = 0;
+		else
+			currColorIndex++;
 	}
 }
