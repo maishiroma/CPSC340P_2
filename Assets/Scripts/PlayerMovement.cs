@@ -32,13 +32,19 @@ public class PlayerMovement : MonoBehaviour {
 		float angle = Mathf.Atan2(playerRotationPos.y, playerRotationPos.x) * Mathf.Rad2Deg;
 		transform.rotation = Quaternion.AngleAxis(angle,Vector3.forward);
 
-		//This part does the shooting mechanic. The player shoots a shot that goes toward the mouse position.
+		//This part does the shooting mechanic. The player shoots a shot that moves in the direction the player is facing.
 		if(inCoolDown == false)
 		{
 			if(Input.GetMouseButtonUp(0) == true)
 			{
 				GameObject shot = (GameObject)Instantiate(paintBallObj, paintBallSpawn.transform.position, Quaternion.identity);
-				shot.GetComponent<Rigidbody2D>().velocity = mousePos * shotSpeed;
+				shot.GetComponent<Rigidbody2D>().velocity =  playerRotationPos * shotSpeed;
+				print(shot.GetComponent<Rigidbody2D>().velocity.magnitude);
+
+				if(shot.GetComponent<Rigidbody2D>().velocity.magnitude < 30f)
+					shot.GetComponent<Rigidbody2D>().velocity *= 5f;
+
+
 				inCoolDown = true;
 				Invoke("ResetCoolDown", shotDelay);
 			}
