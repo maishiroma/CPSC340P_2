@@ -12,6 +12,7 @@ public class EnemySpawner : MonoBehaviour {
     public int right;
     public int top;
     public int bottom;
+    public int z_depth;
 
 	
     void Start()
