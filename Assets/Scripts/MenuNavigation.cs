@@ -22,4 +22,9 @@ public class MenuNavigation : MonoBehaviour {
     {
         SceneManager.LoadScene("HowToPlay");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
