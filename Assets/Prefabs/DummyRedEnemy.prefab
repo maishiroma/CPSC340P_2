@@ -21,7 +21,6 @@ GameObject:
   - 4: {fileID: 4000012535689652}
   - 212: {fileID: 212000012776178702}
   - 61: {fileID: 61000011997015882}
-  - 50: {fileID: 50000013247845932}
   - 114: {fileID: 114000010710300450}
   m_Layer: 0
   m_Name: DummyRedEnemy
@@ -43,23 +42,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!50 &50000013247845932
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010088853928}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &61000011997015882
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -82,9 +64,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010088853928}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7fb9038ab4545b291bd786ad47dd6b, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f88b712eca894bb3b85e3593ae40ccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numbRainbowPoints: 5
   amountHealth: 1
   enemyColor: Red
 --- !u!212 &212000012776178702
