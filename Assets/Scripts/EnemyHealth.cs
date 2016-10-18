@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour {
 	public int numbRainbowPoints;	//How many rainbow nuke points will this enemy give upon being defeated?
 	public int amountHealth;		//How much health will this enemy have?
 	public string enemyColor;		//What color is associated with the enemy?
+	public GameObject[] splatColors;	//Effect on destroying an enemy.
 
 	//Called when the enemy gets hit by a complimentry color.
 	public void DepleteHealth()
@@ -21,6 +22,9 @@ public class EnemyHealth : MonoBehaviour {
 	//This is called to destroy the enemy.
 	public void DestroyEnemy()
 	{
+		//int rand = Random.Range(0,splatColors.Length);
+		//Instantiate(splatColors[rand], gameObject.transform.position, Quaternion.identity);
+
 		Destroy(this.gameObject);
 	}
 }

@@ -6,6 +6,7 @@ using System.Collections;
 public class PlayerShooting : MonoBehaviour {
 
 	public GameObject powerBar;			//The GameObject used to refrence the power bar.
+	public GameObject colorSelectGUI;	//The GameObject used to refrence the current color.
 	public GameObject paintBallObj;		//The GameObject used to represent the shot.
 	public GameObject paintBallSpawn;	//Where the shot will spawn when shooting
 	public GameObject rainbowNukeGraphic;	//This displays the rainbow nuke graphic.
@@ -19,10 +20,7 @@ public class PlayerShooting : MonoBehaviour {
 	void Update () 
 	{
 		if(Input.GetKeyUp(KeyCode.LeftShift) == true)
-		{
 			CycleColorWheel();
-			print(shotColors[currColorIndex]);
-		}
 
 		if(inCoolDown == false)
 		{
@@ -71,5 +69,7 @@ public class PlayerShooting : MonoBehaviour {
 			currColorIndex = 0;
 		else
 			currColorIndex++;
+
+		colorSelectGUI.GetComponent<ColorSelect>().ChangeColorSprite(currColorIndex);
 	}
 }
