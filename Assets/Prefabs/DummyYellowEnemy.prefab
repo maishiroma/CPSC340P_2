@@ -21,8 +21,8 @@ GameObject:
   - 4: {fileID: 4000010771068988}
   - 212: {fileID: 212000013976387636}
   - 61: {fileID: 61000013094045316}
-  - 50: {fileID: 50000013050453964}
   - 114: {fileID: 114000014215960924}
+  - 114: {fileID: 114000012466881570}
   m_Layer: 0
   m_Name: DummyYellowEnemy
   m_TagString: Enemy
@@ -43,23 +43,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!50 &50000013050453964
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011584629966}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &61000013094045316
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -74,6 +57,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
+--- !u!114 &114000012466881570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011584629966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c36a399196cacd47b14e101f56214ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!114 &114000014215960924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -82,7 +77,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011584629966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7fb9038ab4545b291bd786ad47dd6b, type: 3}
+  m_Script: {fileID: 11500000, guid: 34bc9a0cb3fbe414e94465aad74ce722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   amountHealth: 1
