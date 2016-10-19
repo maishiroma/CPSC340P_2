@@ -14,8 +14,9 @@ public class EnemyHealth : MonoBehaviour {
 		if(amountHealth <= 0)
 		{
 			DestroyEnemy();
-		}
-	}
+            GameObject.FindGameObjectWithTag("Counter").GetComponent<KillCounter>().scoreKill();
+        }
+    }
 
 	//This is called to destroy the enemy.
 	void DestroyEnemy()
