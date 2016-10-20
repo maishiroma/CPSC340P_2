@@ -77,9 +77,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000012073975656}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 34bc9a0cb3fbe414e94465aad74ce722, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 5f88b712eca894bb3b85e3593ae40ccb, type: 3}
+>>>>>>> 82574ee3c0a0526867f1d331b913ba491af7118a
   m_Name: 
   m_EditorClassIdentifier: 
+  numbRainbowPoints: 5
   amountHealth: 1
   enemyColor: Orange
 --- !u!212 &212000013978802962

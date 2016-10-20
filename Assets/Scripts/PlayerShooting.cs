@@ -5,8 +5,11 @@ using System.Collections;
 // I used http://answers.unity3d.com/questions/591383/fire-at-mouse-position-2d-game.html to help with this.
 public class PlayerShooting : MonoBehaviour {
 
+	public GameObject powerBar;			//The GameObject used to refrence the power bar.
+	public GameObject colorSelectGUI;	//The GameObject used to refrence the current color.
 	public GameObject paintBallObj;		//The GameObject used to represent the shot.
 	public GameObject paintBallSpawn;	//Where the shot will spawn when shooting
+	public GameObject rainbowNukeGraphic;	//This displays the rainbow nuke graphic.
 	public float shotSpeed;				//How fast is the shot going?
 	public float shotDelay;				//How much delay is in between each shot?
 	public bool inCoolDown;				//Is the player currently in cooldown?
@@ -17,10 +20,7 @@ public class PlayerShooting : MonoBehaviour {
 	void Update () 
 	{
 		if(Input.GetKeyUp(KeyCode.LeftShift) == true)
-		{
 			CycleColorWheel();
-			print(shotColors[currColorIndex]);
-		}
 
 		if(inCoolDown == false)
 		{
@@ -44,6 +44,15 @@ public class PlayerShooting : MonoBehaviour {
 				inCoolDown = true;
 				Invoke("ResetCoolDown", shotDelay);
 			}
+			else if(Input.GetMouseButtonUp(1) == true)
+			{
+				//If the player has a full bar, they can activate a screen nuke.
+				if(powerBar.GetComponent<RainbowNukeShot>().isFull == true)
+				{
+					Instantiate(rainbowNukeGraphic,gameObject.transform.position,Quaternion.identity);
+					powerBar.GetComponent<RainbowNukeShot>().ActivateRainbowNuke();
+				}
+			}
 		}
 	}
 
@@ -60,5 +69,7 @@ public class PlayerShooting : MonoBehaviour {
 			currColorIndex = 0;
 		else
 			currColorIndex++;
+
+		colorSelectGUI.GetComponent<ColorSelect>().ChangeColorSprite(currColorIndex);
 	}
 }
