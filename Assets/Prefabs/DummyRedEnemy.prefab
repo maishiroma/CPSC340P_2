@@ -22,6 +22,7 @@ GameObject:
   - 212: {fileID: 212000012776178702}
   - 61: {fileID: 61000011997015882}
   - 114: {fileID: 114000010710300450}
+  - 114: {fileID: 114000013953955590}
   m_Layer: 0
   m_Name: DummyRedEnemy
   m_TagString: Enemy
@@ -70,6 +71,20 @@ MonoBehaviour:
   numbRainbowPoints: 5
   amountHealth: 1
   enemyColor: Red
+  splatColors:
+  - {fileID: 0}
+--- !u!114 &114000013953955590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010088853928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 359c962b85dea41d8a570f7c56f1ff32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!212 &212000012776178702
 SpriteRenderer:
   m_ObjectHideFlags: 1

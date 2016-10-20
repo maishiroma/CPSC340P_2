@@ -22,6 +22,7 @@ GameObject:
   - 212: {fileID: 212000010340601990}
   - 61: {fileID: 61000013381730082}
   - 114: {fileID: 114000010801507050}
+  - 114: {fileID: 114000010299369634}
   m_Layer: 0
   m_Name: DummyGreenEnemy
   m_TagString: Enemy
@@ -56,6 +57,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
+--- !u!114 &114000010299369634
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011228126616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 359c962b85dea41d8a570f7c56f1ff32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!114 &114000010801507050
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -70,6 +83,8 @@ MonoBehaviour:
   numbRainbowPoints: 5
   amountHealth: 1
   enemyColor: Green
+  splatColors:
+  - {fileID: 0}
 --- !u!212 &212000010340601990
 SpriteRenderer:
   m_ObjectHideFlags: 1
