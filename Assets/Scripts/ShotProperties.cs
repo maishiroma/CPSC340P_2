@@ -14,16 +14,26 @@ public class ShotProperties : MonoBehaviour {
 		Invoke("DestroyShot",timeToDissapear);
 	}
 
-	//If the enemy is of complimentry color to the shot, it will take damage.
+	//If the enemy is of complimentry color to the shot, it will take damage. Else, it will speed it up.
 	void OnCollisionEnter2D(Collision2D other)
 	{
 		if(other.gameObject.tag == "Enemy")
 		{
 			if(CheckIfComplimentryColor(other.gameObject.GetComponent<EnemyHealth>().enemyColor) == true)
 				other.gameObject.GetComponent<EnemyHealth>().DepleteHealth();
-				
-			DestroyShot();
+			else
+				other.gameObject.GetComponent<EnemyMovement>().speed += 0.2f;
+
 		}
+		else if(other.gameObject.tag == "Boss")
+		{
+			if(CheckIfComplimentryColor(other.gameObject.GetComponent<BossAI>().GetBossColor()) == true)
+				other.gameObject.GetComponent<BossAI>().OnSuccessHit();
+			else
+				other.gameObject.GetComponent<EnemyMovement>().speed += 0.2f;
+		}
+
+		DestroyShot();
 	}
 
 	//Gets rid of the shot
