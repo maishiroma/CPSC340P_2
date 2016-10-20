@@ -17,7 +17,6 @@ public class KillCounter : MonoBehaviour {
     void Start() {
 
         gui_style.fontSize = 52;
-        gui_style.font = (Font)Resources.Load("Fonts/Painterz/Painterz.tff");
 
     }
 

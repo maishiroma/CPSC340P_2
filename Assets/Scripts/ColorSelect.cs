@@ -4,20 +4,14 @@ using System.Collections;
 // This controls the GUI used for the color selecting.
 public class ColorSelect : MonoBehaviour {
 
-	public Sprite[] colorSprites;		//What sprites are there to represent the color that the player is on?
+	public float rotateZAmount;			//How much will the wheel rotate?
 
-	// Changes the sprite to the approperiate color
-	public void ChangeColorSprite(int index)
+	// Rotates the wheel so that the selected color is at the top while the comp color of that is at the bottom.
+	public void RotateWheel()
 	{
-		/*	
-		 * 	0 = Yellow
-		 *  1 = Green
-		 * 	2 = Blue
-		 *  3 = Purple
-		 *  4 = Red
-		 *  5 = Orange
-		 */
-
-		gameObject.GetComponent<SpriteRenderer>().sprite = colorSprites[index];
+		if(Mathf.Abs(gameObject.transform.GetChild(0).transform.rotation.z + rotateZAmount) >= 360f)
+			gameObject.transform.GetChild(0).transform.Rotate(0,0,0);
+		else
+			gameObject.transform.GetChild(0).transform.Rotate(0,0,rotateZAmount);
 	}
 }

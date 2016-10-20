@@ -70,6 +70,6 @@ public class PlayerShooting : MonoBehaviour {
 		else
 			currColorIndex++;
 
-		colorSelectGUI.GetComponent<ColorSelect>().ChangeColorSprite(currColorIndex);
+		colorSelectGUI.GetComponent<ColorSelect>().RotateWheel();
 	}
 }

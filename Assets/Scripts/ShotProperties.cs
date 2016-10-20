@@ -24,6 +24,8 @@ public class ShotProperties : MonoBehaviour {
 			else
 				other.gameObject.GetComponent<EnemyMovement>().speed += 0.2f;
 
+			DestroyShot();
+
 		}
 		else if(other.gameObject.tag == "Boss")
 		{
@@ -32,8 +34,6 @@ public class ShotProperties : MonoBehaviour {
 			else
 				other.gameObject.GetComponent<EnemyMovement>().speed += 0.2f;
 		}
-
-		DestroyShot();
 	}
 
 	//Gets rid of the shot
