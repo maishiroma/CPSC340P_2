@@ -22,7 +22,11 @@ GameObject:
   - 212: {fileID: 212000013976387636}
   - 61: {fileID: 61000013094045316}
   - 114: {fileID: 114000014215960924}
+<<<<<<< HEAD
   - 114: {fileID: 114000011060175036}
+=======
+  - 114: {fileID: 114000012466881570}
+>>>>>>> a873ea129ca57104cfe37a389c5e960f337fbe51
   m_Layer: 0
   m_Name: DummyYellowEnemy
   m_TagString: Enemy
@@ -57,7 +61,11 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
+<<<<<<< HEAD
 --- !u!114 &114000011060175036
+=======
+--- !u!114 &114000012466881570
+>>>>>>> a873ea129ca57104cfe37a389c5e960f337fbe51
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -65,7 +73,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011584629966}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 359c962b85dea41d8a570f7c56f1ff32, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 2c36a399196cacd47b14e101f56214ef, type: 3}
+>>>>>>> a873ea129ca57104cfe37a389c5e960f337fbe51
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
@@ -77,7 +89,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011584629966}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
+  m_Script: {fileID: 11500000, guid: 34bc9a0cb3fbe414e94465aad74ce722, type: 3}
+=======
   m_Script: {fileID: 11500000, guid: 5f88b712eca894bb3b85e3593ae40ccb, type: 3}
+>>>>>>> 82574ee3c0a0526867f1d331b913ba491af7118a
   m_Name: 
   m_EditorClassIdentifier: 
   numbRainbowPoints: 5

@@ -22,7 +22,11 @@ GameObject:
   - 212: {fileID: 212000013978802962}
   - 61: {fileID: 61000011748465196}
   - 114: {fileID: 114000012985424904}
+<<<<<<< HEAD
   - 114: {fileID: 114000013554536002}
+=======
+  - 114: {fileID: 114000010610193902}
+>>>>>>> a873ea129ca57104cfe37a389c5e960f337fbe51
   m_Layer: 0
   m_Name: DummyOrangeEnemy
   m_TagString: Enemy
@@ -57,6 +61,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
+--- !u!114 &114000010610193902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012073975656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ad3c3095f624260aa2cad943f9b81e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
 --- !u!114 &114000012985424904
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -65,7 +81,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000012073975656}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
+  m_Script: {fileID: 11500000, guid: 34bc9a0cb3fbe414e94465aad74ce722, type: 3}
+=======
   m_Script: {fileID: 11500000, guid: 5f88b712eca894bb3b85e3593ae40ccb, type: 3}
+>>>>>>> 82574ee3c0a0526867f1d331b913ba491af7118a
   m_Name: 
   m_EditorClassIdentifier: 
   numbRainbowPoints: 5

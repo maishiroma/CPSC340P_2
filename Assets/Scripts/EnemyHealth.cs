@@ -14,10 +14,14 @@ public class EnemyHealth : MonoBehaviour {
 	{
 		amountHealth--;
 		GameObject.FindGameObjectWithTag("PowerBar").GetComponent<RainbowNukeShot>().AddToGauge(numbRainbowPoints);
-		if(amountHealth <= 0)
+		if(amountHealth <= 0){
 			DestroyEnemy();
-			
-	}
+            		GameObject.FindGameObjectWithTag("Counter").GetComponent<KillCounter>().scoreKill();
+		}
+        }
+    
+
+
 
 	//This is called to destroy the enemy.
 	public void DestroyEnemy()
