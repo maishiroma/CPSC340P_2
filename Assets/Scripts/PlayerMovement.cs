@@ -8,12 +8,6 @@ public class PlayerMovement : MonoBehaviour {
 	public GameObject playerHealth;		//The gameobject used to keep track of the player health.
 	public float moveSpeed;				//How fast will the player move?
 
-	//Makes sure there's only one player in the room.
-	void Awake()
-	{
-		DontDestroyOnLoad(this.gameObject);
-	}
-
 	void Update()
 	{
 		//This part controls the movement of the player by allowing for 8 directional movement

@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1000011795289300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.5, y: 0.16, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011795289300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f88b712eca894bb3b85e3593ae40ccb, type: 3}
+  m_Script: {fileID: 11500000, guid: ee1e2daf5422a4edfb33e75b2cd6ead9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   numbRainbowPoints: 5
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011795289300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 359c962b85dea41d8a570f7c56f1ff32, type: 3}
+  m_Script: {fileID: 11500000, guid: 71e9a31ca1afd471983474adb93cecd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1

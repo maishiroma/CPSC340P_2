@@ -32,7 +32,11 @@ public class RainbowNukeShot : MonoBehaviour {
 	{
 		GameObject[] allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
 		for(int i = 0; i < allEnemies.Length; i++)
+		{
+			GameObject.FindGameObjectWithTag("Counter").GetComponent<KillCounter>().scoreKill();
 			allEnemies[i].GetComponent<EnemyHealth>().DestroyEnemy();
+		}
+			
 
 		gaugeCounter = 0;
 		nextGaugeMark = 5;

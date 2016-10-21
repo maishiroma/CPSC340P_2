@@ -11,7 +11,7 @@ public class RainbowNukeGraphic : MonoBehaviour {
 	
 	void Update()
 	{
-		gameObject.transform.localScale += new Vector3(0.01f,0.01f,0);
+		gameObject.transform.localScale += new Vector3(0.04f,0.04f,0);
 	}
 
 	void DestroyObject()
