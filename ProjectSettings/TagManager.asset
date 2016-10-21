@@ -9,6 +9,7 @@ TagManager:
   - Boss
   - Splat
   - Counter
+  - Wall
   layers:
   - Default
   - TransparentFX

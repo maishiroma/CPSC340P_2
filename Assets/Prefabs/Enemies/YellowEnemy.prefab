@@ -71,7 +71,7 @@ MonoBehaviour:
   numbRainbowPoints: 5
   amountHealth: 1
   enemyColor: Yellow
-  splatColor: {fileID: 1000010943121454, guid: 43b7fc7122b6a4ce293239dd900c70ee, type: 2}
+  splatColor: {fileID: 1000012380088772, guid: e7951281100d3465e8bd5b0502cb71e4, type: 2}
 --- !u!114 &114000013101897560
 MonoBehaviour:
   m_ObjectHideFlags: 1

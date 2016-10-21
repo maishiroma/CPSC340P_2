@@ -5,7 +5,8 @@ using System.Collections;
 // I used http://answers.unity3d.com/questions/597800/top-down-2d-movement-without-being-affected-by-rot.html to help me for the rotation and movement. 
 public class PlayerMovement : MonoBehaviour {
 
-	public float moveSpeed;		//How fast will the player move?
+	public GameObject playerHealth;		//The gameobject used to keep track of the player health.
+	public float moveSpeed;				//How fast will the player move?
 
 	//Makes sure there's only one player in the room.
 	void Awake()
@@ -26,6 +27,16 @@ public class PlayerMovement : MonoBehaviour {
 		float angle = Mathf.Atan2(playerRotationPos.y, playerRotationPos.x) * Mathf.Rad2Deg;
 		transform.rotation = Quaternion.AngleAxis(angle,Vector3.forward);
 
+
 	}
+
+	// If the player runs into an enemy/boss
+	void OnCollisionStay2D(Collision2D other)
+	{
+		if(other.gameObject.tag == "Enemy" || other.gameObject.tag == "Boss")
+			playerHealth.GetComponent<HealthCounter>().TakeDamage();
+	}
+
+
 
 }
