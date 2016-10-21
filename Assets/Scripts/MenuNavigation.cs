@@ -23,6 +23,10 @@ public class MenuNavigation : MonoBehaviour {
         SceneManager.LoadScene("HowToPlay");
     }
 
+    public void ColorSystem() {
+        SceneManager.LoadScene("SystemsScreen");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
