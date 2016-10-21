@@ -430,6 +430,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011036117890, guid: 4dca762fd338048a195e9a8f502d7f79,
+        type: 2}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1422157590}
     - target: {fileID: 114000010862113894, guid: 4dca762fd338048a195e9a8f502d7f79,
         type: 2}
       propertyPath: powerBar
@@ -440,11 +445,6 @@ Prefab:
       propertyPath: colorSelectGUI
       value: 
       objectReference: {fileID: 1122302786}
-    - target: {fileID: 114000011036117890, guid: 4dca762fd338048a195e9a8f502d7f79,
-        type: 2}
-      propertyPath: playerHealth
-      value: 
-      objectReference: {fileID: 1422157590}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4dca762fd338048a195e9a8f502d7f79, type: 2}
   m_IsPrefabParent: 0
