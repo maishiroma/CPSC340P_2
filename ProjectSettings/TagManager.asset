@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags: []
+=======
+  tags:
+  - Enemy
+  - PowerBar
+  - Boss
+  - Splat
+  - Counter
+  - Wall
+>>>>>>> MatthewBranch
   layers:
   - Default
   - TransparentFX

@@ -25,7 +25,6 @@ public class ShotProperties : MonoBehaviour {
 				other.gameObject.GetComponent<EnemyHealth>().DepleteHealth();
 			else
 				other.gameObject.GetComponent<EnemyMovement>().speed += 0.2f;
-
 		}
 		else if(other.gameObject.tag == "Boss")
 		{
