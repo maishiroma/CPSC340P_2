@@ -15,13 +15,16 @@ public class KillCounter : MonoBehaviour {
     public GUIStyle gui_style = new GUIStyle();
 
     void Start() {
-
         gui_style.fontSize = 52;
-
     }
 
     public void scoreKill() {
         kill_count++;
+        GameObject.FindGameObjectWithTag("RoundSystem").GetComponent<RoundSystem>().checkIfTargetReached();
+    }
+
+    public void resetCounter() {
+        kill_count = 0;
     }
 
     void OnGUI() {

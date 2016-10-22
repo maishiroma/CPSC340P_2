@@ -6,6 +6,7 @@ public class EnemySpawner : MonoBehaviour {
     public GameObject enemy_prefab;
     public float spawn_rate;
     public float time_interval;
+    public float enemy_speed;
 
     // range of spawn
     public int left;
@@ -22,6 +23,7 @@ public class EnemySpawner : MonoBehaviour {
 
     void SpawnEnemy()
     {
-        Instantiate(enemy_prefab, new Vector3(Random.Range(left, right), Random.Range(top, bottom), z_depth), Quaternion.identity);
+        GameObject enemy = (GameObject)Instantiate(enemy_prefab, new Vector3(Random.Range(left, right), Random.Range(top, bottom), z_depth), Quaternion.identity);
+        enemy.GetComponent<EnemyMovement>().speed += enemy_speed;
     }
 }
