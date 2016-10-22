@@ -6,7 +6,7 @@ public class MenuNavigation : MonoBehaviour {
 
     public void StartGame()
     {
-        SceneManager.LoadScene("TestScene");
+        SceneManager.LoadScene("MainScene");
     }
 
     public void LoadMenu(){

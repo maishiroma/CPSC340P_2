@@ -21,7 +21,7 @@ public class HealthCounter : MonoBehaviour {
 		this.gameObject.GetComponent<SpriteRenderer>().sprite = healthGUI[currHealthIndex];
 		if(currHealthIndex == 0)
 		{
-			if(SceneManager.GetActiveScene().name == "")
+			if(SceneManager.GetActiveScene().name == "MainScene")
 				SceneManager.LoadScene("BonusScene");
 			else
 				SceneManager.LoadScene("GameOver");
