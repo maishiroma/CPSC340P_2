@@ -82,6 +82,7 @@ public class BossAI : MonoBehaviour {
 		if(colorList.Count != 0 && canShoot == true)
 		{
 			colorList.Remove(colorList[0]);
+			GameObject.FindGameObjectWithTag("Counter").GetComponent<KillCounter>().scoreKill();
 
 			if(colorList.Count == 0)
 			{
