@@ -9,51 +9,53 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000011220159784}
+  m_RootGameObject: {fileID: 1000011202053590}
   m_IsPrefabParent: 1
---- !u!1 &1000011220159784
+--- !u!1 &1000011202053590
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000013948854790}
-  - 114: {fileID: 114000010634025640}
+  - 4: {fileID: 4000012278720422}
+  - 114: {fileID: 114000011429956786}
   m_Layer: 0
-  m_Name: KOCounter
-  m_TagString: Counter
+  m_Name: RoundCounter
+  m_TagString: RoundSystem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000013948854790
+--- !u!4 &4000012278720422
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011220159784}
+  m_GameObject: {fileID: 1000011202053590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -11}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &114000010634025640
+--- !u!114 &114000011429956786
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011220159784}
+  m_GameObject: {fileID: 1000011202053590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34cbc38d90e35f8418472383faa7e1cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 419fe0515942a9547a4c2323aa115fe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kill_count: 0
-  pos_x: 1374
-  pos_y: 674
+  current_round: 1
+  target_objective: 10
+  change_inSpeed: 0.5
+  pos_x: 1295
+  pos_y: 803
   gui_style:
     m_Name: 
     m_Normal:

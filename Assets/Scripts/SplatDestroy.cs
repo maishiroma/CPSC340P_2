@@ -1,15 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-// This will destroy a splat once X amount of time has passed.
+// This will destroy a splat once the end of the round happens.
 public class SplatDestroy : MonoBehaviour {
 
-	void Start()
-	{
-		Invoke("DestroySplat",10f);
-	}
-
-	void DestroySplat()
+	public void DestroySplat()
 	{
 		Destroy(gameObject);
 	}
