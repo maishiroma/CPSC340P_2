@@ -14,12 +14,18 @@ public class HealthCounter : MonoBehaviour {
 	public Sprite[] healthGUI;
 	public AudioClip hitSound = new AudioClip();
 
-	//Constantly checks if the player has taken damage. If so, it updates the GUI for it. If it falls below 0, it calls the GameOver function.
+	//Constantly checks if the player has taken damage. If so, it updates the GUI for it. If it falls below 0, the game switches to either the Bonus Scene ot
+	// the GameOver Scene
 	void Update () 
 	{
 		this.gameObject.GetComponent<SpriteRenderer>().sprite = healthGUI[currHealthIndex];
 		if(currHealthIndex == 0)
-			SceneManager.LoadScene("GameOver");
+		{
+			if(SceneManager.GetActiveScene().name == "")
+				SceneManager.LoadScene("BonusScene");
+			else
+				SceneManager.LoadScene("GameOver");
+		}
 	}
 
 	//This is called in PlayerMovement when the player hits an enemy. They also get X numb of invinicible frames.
