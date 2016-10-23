@@ -8,8 +8,6 @@ public class ShotProperties : MonoBehaviour {
 	public string shotColor;			//What is the color of the shot?
 	public Sprite[] shotColorSprites;	//What look is the current sprite at?
 
-    private int kill_count;    // contains the number of kills the player has
-
     //Starts the countdown for the shot to dissapear
     void Start () 
 	{
