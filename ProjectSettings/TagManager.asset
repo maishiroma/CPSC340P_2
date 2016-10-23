@@ -9,6 +9,8 @@ TagManager:
   - Splat
   - Counter
   - PowerBar
+  - RoundSystem
+  - Spawner
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+
 
 public class RoundSystem : MonoBehaviour {
 
@@ -14,43 +16,60 @@ public class RoundSystem : MonoBehaviour {
     // position to display current round
     public int pos_x;
     public int pos_y;
-    public int screen_w = 16;
-    public int screen_h = 9;
 
     public GUIStyle gui_style = new GUIStyle();
 
+	private Vector3 posOfGUI;							//Used to dynamically shape the font's position on screens <= 1600x900 resolution
+
     void Start()
     {
-
-        gui_style.fontSize = 52;
-
+		posOfGUI = GameObject.Find("Main Camera").GetComponent<Camera>().WorldToScreenPoint(gameObject.transform.position);
     }
 
+	// Depending on the Scene, changes the logic flow in what happens if the kill count == target_objective
     public void checkIfTargetReached()
     {
         GameObject counter = GameObject.FindGameObjectWithTag("Counter");
 
+		if (counter.GetComponent<KillCounter>().kill_count == target_objective)
+		{
+			current_round++;
 
-        if (counter.GetComponent<KillCounter>().kill_count == target_objective)
-        {
-            current_round++;
-            target_objective += 10;
+			if(SceneManager.GetActiveScene().name == "MainScene")
+			{
+				target_objective += 10;
 
-            GameObject[] temp = GameObject.FindGameObjectsWithTag("Spawner");
+				GameObject[] temp = GameObject.FindGameObjectsWithTag("Spawner");
+				GameObject[] splats = GameObject.FindGameObjectsWithTag("Splat");
 
-            for (int i = 0; i < temp.Length; i++) {
-                temp[i].GetComponent<EnemySpawner>().enemy_speed += change_inSpeed;
-            }
+				for (int i = 0; i < temp.Length; i++) {
+					temp[i].GetComponent<EnemySpawner>().enemy_speed += change_inSpeed;
+				}
 
-            counter.GetComponent<KillCounter>().resetCounter();
+				for (int i = 0; i < splats.Length; i++) {
+					splats[i].GetComponent<SplatDestroy>().DestroySplat();
+				}
 
-        }
+				counter.GetComponent<KillCounter>().resetCounter();
+			}
+			else
+			{
+				target_objective += current_round;
 
+				GameObject.FindGameObjectWithTag("Boss").GetComponent<EnemyMovement>().speed += change_inSpeed;
+			}
+		}
+			
     }
 
     void OnGUI()
     {
-        GUI.Label(new Rect(pos_x, pos_y, screen_w, screen_h), "Round: " + current_round.ToString(), gui_style);
+		GUI.matrix = Matrix4x4.TRS( Vector3.zero, Quaternion.identity, new Vector3( Screen.width / 1600.0f, Screen.height / 900.0f, 1.0f ) );
+
+		if(SceneManager.GetActiveScene().name == "MainScene")
+			GUI.Label(new Rect(pos_x, pos_y, posOfGUI.x, posOfGUI.y), "Round: " + current_round.ToString(), gui_style);
+		else
+			GUI.Label(new Rect(pos_x, pos_y, posOfGUI.x, posOfGUI.y), "Bonus Round: " + current_round.ToString(), gui_style);
     }
 
 }
