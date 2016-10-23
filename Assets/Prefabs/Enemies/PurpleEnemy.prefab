@@ -21,6 +21,7 @@ GameObject:
   - 4: {fileID: 4000014254116032}
   - 212: {fileID: 212000011882054966}
   - 61: {fileID: 61000013638421766}
+  - 50: {fileID: 50000014129050820}
   - 114: {fileID: 114000012355631596}
   - 114: {fileID: 114000013138313866}
   m_Layer: 0
@@ -43,6 +44,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &50000014129050820
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011417113732}
+  m_UseAutoMass: 0
+  m_Mass: 10
+  m_LinearDrag: 10
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!61 &61000013638421766
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -72,6 +90,8 @@ MonoBehaviour:
   amountHealth: 1
   enemyColor: Purple
   splatColor: {fileID: 1000010946155102, guid: d54cd0842238f4f0ba971ffb16a14918, type: 2}
+  splat_sound: {fileID: 8300000, guid: c612ef7b948bac44c8e64c4cd057e0e8, type: 3}
+  vol_scale: 0.7
 --- !u!114 &114000013138313866
 MonoBehaviour:
   m_ObjectHideFlags: 1

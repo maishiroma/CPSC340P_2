@@ -152,6 +152,9 @@ MonoBehaviour:
   - Red
   - Orange
   currColorIndex: 0
+  shot_sound: {fileID: 8300000, guid: 37a481244791d1e41b9ddd41dd224bd9, type: 3}
+  vol_scale: 0.7
+  sound: {fileID: 0}
 --- !u!114 &114000011036117890
 MonoBehaviour:
   m_ObjectHideFlags: 1

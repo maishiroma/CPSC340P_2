@@ -10,11 +10,14 @@ public class EnemyHealth : MonoBehaviour {
 	public GameObject splatColor;	//Effect on destroying an enemy.
     public AudioClip splat_sound;   // Sound Effect for when the enemy dies
     public float vol_scale = 0.7f;  // Volume for FX from 0-1; default at 0.7f
-    public AudioSource sound;
+    
+	private GameObject sound;
 
-    void Start() {
-        sound = GetComponent<AudioSource>();
-    }
+	void Start()
+	{
+		sound = GameObject.Find("GameBGM");
+	}
+
 
     //Called when the enemy gets hit by a complimentry color.
     public void DepleteHealth()
@@ -23,7 +26,7 @@ public class EnemyHealth : MonoBehaviour {
 		GameObject.FindGameObjectWithTag("PowerBar").GetComponent<RainbowNukeShot>().AddToGauge(numbRainbowPoints);
 		if(amountHealth <= 0)
 		{
-            sound.PlayOneShot(splat_sound, vol_scale);
+			sound.GetComponent<AudioSource>().PlayOneShot(splat_sound, vol_scale);
 			DestroyEnemy();
             GameObject.FindGameObjectWithTag("Counter").GetComponent<KillCounter>().scoreKill();
 		}

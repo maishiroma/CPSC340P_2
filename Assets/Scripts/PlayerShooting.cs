@@ -17,11 +17,13 @@ public class PlayerShooting : MonoBehaviour {
 	public int currColorIndex;			//What color is the player currently on?
     public AudioClip shot_sound;        // Sound Effect for when the Player Fires
     public float vol_scale = 0.7f;      // Volume for FX from 0-1; default at 0.7f
-    public AudioSource sound;
 
-    void Start() {
-        sound = GetComponent<AudioSource>();
-    }
+	private GameObject sound;
+
+	void Awake()
+	{
+		sound = GameObject.Find("GameBGM");
+	}
 
 	//This part does the shooting mechanic. The player shoots a shot that moves in the direction the player is facing.
 	void Update () 
@@ -48,7 +50,7 @@ public class PlayerShooting : MonoBehaviour {
 				shot.GetComponent<Rigidbody2D>().AddForce(shot.transform.up * shotSpeed);
 
                 // Sound Effect for Shots Fired Plays
-                sound.PlayOneShot(shot_sound, vol_scale);
+				sound.GetComponent<AudioSource>().PlayOneShot(shot_sound, vol_scale);
 
 				//After firing a shot, the player is in cool down, where they have to wait for shotDelay in order to shoot again.
 				inCoolDown = true;
