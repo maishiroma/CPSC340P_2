@@ -94,6 +94,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5dc3ec291a4964fcb964d25e116ec931, type: 3}
   - {fileID: 21300000, guid: fca8c47f36eb24a92bcfc39f95617723, type: 3}
   - {fileID: 21300000, guid: e148d7d1c77544decaff91dd60c7f1fb, type: 3}
+  correctSound: {fileID: 8300000, guid: 931ca57a04a8c428b862603a0c604586, type: 3}
+  wrongSound: {fileID: 8300000, guid: 9599be19d380b4ffda9c9e2a80c8f560, type: 3}
 --- !u!212 &212000010056005578
 SpriteRenderer:
   m_ObjectHideFlags: 1

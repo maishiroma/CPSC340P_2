@@ -14,7 +14,16 @@ public class BossAI : MonoBehaviour {
 	public int currRound = 1;										//What round is the boss currently on?
 	public bool inColorFlash = false;								//Is the boss currently flashing its colors?
 	public bool canShoot = false;									//Is the boss vulnerable to attacks now?
+	public AudioClip correctSound;		
+	public AudioClip wrongSound;
 
+	private GameObject soundSource;
+
+	void Start()
+	{
+		soundSource = GameObject.Find("GameBGM");
+	}
+		
 	//This is called to allow the boss to flash the colors to the player.
 	void Update () 
 	{
@@ -67,15 +76,6 @@ public class BossAI : MonoBehaviour {
 		}
 	}
 
-	//Returns the first color in the boss's color list
-	public string GetBossColor()
-	{
-		if(colorList.Count != 0)
-			return colorList[0];
-		else
-			return "Yellow";
-	}
-
 	//Upon a successful hit, decrements the list of colors for the player to hit. If the color list is empty, the boss's round increments.
 	public void OnSuccessHit()
 	{
@@ -83,6 +83,7 @@ public class BossAI : MonoBehaviour {
 		{
 			colorList.Remove(colorList[0]);
 			GameObject.FindGameObjectWithTag("Counter").GetComponent<KillCounter>().scoreKill();
+			soundSource.GetComponent<AudioSource>().PlayOneShot(correctSound,0.5f);
 
 			if(colorList.Count == 0)
 			{
@@ -92,5 +93,23 @@ public class BossAI : MonoBehaviour {
 		}
 	}
 
+	//Returns the first color in the boss's color list
+	public string GetBossColor()
+	{
+		if(colorList.Count != 0)
+			return colorList[0];
+		else
+			return "Yellow";
+	}
+
+	//Plays a wrong sound bite if the player shoots the boss with the incorrect color.
+	public void UnSucessfullHit()
+	{
+		if(canShoot == true)
+		{
+			soundSource.GetComponent<AudioSource>().PlayOneShot(wrongSound,0.5f);
+			gameObject.GetComponent<EnemyMovement>().speed += 0.2f;
+		}
+	}
 
 }

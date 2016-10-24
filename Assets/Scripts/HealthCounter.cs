@@ -36,7 +36,7 @@ public class HealthCounter : MonoBehaviour {
 			currHealthIndex--;
 			inviniFrames = true;
 			GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,0.5f);
-			//GameObject.Find("SFX").GetComponent<AudioSource>().PlayOneShot(hitSound,0.3f);
+			GameObject.Find("GameBGM").GetComponent<AudioSource>().PlayOneShot(hitSound,1f);
 			StartCoroutine(ResetInviniFrames());
 		}
 	}

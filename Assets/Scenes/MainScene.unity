@@ -622,6 +622,11 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010862113894, guid: 4dca762fd338048a195e9a8f502d7f79,
+        type: 2}
+      propertyPath: nuke_sound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a03d2b432417463ab37092c72d27b14, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4dca762fd338048a195e9a8f502d7f79, type: 2}
   m_IsPrefabParent: 0
@@ -1085,6 +1090,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010663983172, guid: 065a92ccad09a440eb032110e13e138f,
+        type: 2}
+      propertyPath: hitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b908002484f94400383b96f0326152db, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 065a92ccad09a440eb032110e13e138f, type: 2}
   m_IsPrefabParent: 0

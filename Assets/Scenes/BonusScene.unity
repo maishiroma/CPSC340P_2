@@ -468,6 +468,16 @@ Prefab:
       propertyPath: m_Mass
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 114000014061874588, guid: 58d4d4e3c4e9a4b8abb0f9fdb398d2b6,
+        type: 2}
+      propertyPath: correctSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 931ca57a04a8c428b862603a0c604586, type: 3}
+    - target: {fileID: 114000014061874588, guid: 58d4d4e3c4e9a4b8abb0f9fdb398d2b6,
+        type: 2}
+      propertyPath: wrongSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9599be19d380b4ffda9c9e2a80c8f560, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 58d4d4e3c4e9a4b8abb0f9fdb398d2b6, type: 2}
   m_IsPrefabParent: 0

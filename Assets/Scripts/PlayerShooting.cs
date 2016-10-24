@@ -16,6 +16,7 @@ public class PlayerShooting : MonoBehaviour {
 	public string[] shotColors;			//All of the colors the player has?
 	public int currColorIndex;			//What color is the player currently on?
     public AudioClip shot_sound;        // Sound Effect for when the Player Fires
+	public AudioClip nuke_sound;        // Sound Effect for when the Player used the nuke
     public float vol_scale = 0.7f;      // Volume for FX from 0-1; default at 0.7f
 
 	private GameObject sound;
@@ -63,6 +64,7 @@ public class PlayerShooting : MonoBehaviour {
 				{
 					Instantiate(rainbowNukeGraphic,gameObject.transform.position,Quaternion.identity);
 					powerBar.GetComponent<RainbowNukeShot>().ActivateRainbowNuke();
+					sound.GetComponent<AudioSource>().PlayOneShot(nuke_sound, vol_scale);
 				}
 			}
 		}
